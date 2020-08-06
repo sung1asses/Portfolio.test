@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Auth::routes();
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+  ]);
 
 Route::prefix('admin')->middleware('auth')->group(function(){
     Route::get('/', 'HomeController@index');
@@ -26,3 +30,7 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 Route::get('/{any}', function () {
     return view('spa');
 })->where('any', '.*');
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->middleware('verified');

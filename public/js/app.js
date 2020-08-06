@@ -2053,12 +2053,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37653,7 +37647,8 @@ var render = function() {
     _c(
       "nav",
       {
-        staticClass: "navbar navbar-expand-md navbar-light bg-white shadow-sm"
+        staticClass:
+          "navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top"
       },
       [
         _c(
@@ -37995,17 +37990,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("\n                    404!!!\n                ")
-            ])
-          ])
-        ])
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-md-12 d-flex justify-content-center align-items-center"
+          },
+          [_c("h1", { staticClass: "py-5 my-5" }, [_vm._v("Error 404")])]
+        )
       ])
     ])
   }

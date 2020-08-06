@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
                 <router-link  class="navbar-brand" :to="{ name: 'home' }">Portfolio</router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#spaNavbarSupportedContent" aria-controls="spaNavbarSupportedContent" aria-expanded="false">
